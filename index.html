@@ -588,55 +588,7 @@
                             +91 97251 37976
                         </a>
                     </div>
-
-                    <div class="flex items-center gap-3">
-                        <div class="rounded-lg bg-brand-50 dark:bg-slate-900 p-2 text-brand-600 dark:text-cyber-500">
-                            <i class="fa-solid fa-location-dot"></i>
-                        
-                </div>
             </div>
-
-            <!-- Beautiful Active Mock Contact Form -->
-            <div class="lg:col-span-7 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 sm:p-8 shadow-sm">
-                <form id="contactForm" onsubmit="handleContactSubmit(event)" class="space-y-4">
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <div class="space-y-1">
-                            <label class="text-xs font-semibold text-slate-600 dark:text-slate-400">Full Name</label>
-                            <input type="text" required id="contactName" placeholder="Prof. Jane Doe" class="w-full text-xs px-3 py-2.5 rounded-lg border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 focus:outline-none focus:ring-2 focus:ring-brand-500">
-                        </div>
-                        <div class="space-y-1">
-                            <label class="text-xs font-semibold text-slate-600 dark:text-slate-400">Academic / Business Email</label>
-                            <input type="email" required id="contactEmail" placeholder="jane.doe@university.edu" class="w-full text-xs px-3 py-2.5 rounded-lg border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 focus:outline-none focus:ring-2 focus:ring-brand-500">
-                        </div>
-                    </div>
-
-                    <div class="space-y-1">
-                        <label class="text-xs font-semibold text-slate-600 dark:text-slate-400">Institutional Affiliation</label>
-                        <input type="text" id="contactAffiliation" placeholder="MIT, Dept. of Computer Science" class="w-full text-xs px-3 py-2.5 rounded-lg border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 focus:outline-none focus:ring-2 focus:ring-brand-500">
-                    </div>
-
-                    <div class="space-y-1">
-                        <label class="text-xs font-semibold text-slate-600 dark:text-slate-400">Collaboration Interest</label>
-                        <select id="contactTopic" class="w-full text-xs px-3 py-2.5 rounded-lg border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 focus:outline-none focus:ring-2 focus:ring-brand-500 text-slate-600 dark:text-slate-300">
-                            <option value="research">Joint Research Paper Collaboration</option>
-                            <option value="speaking">Academic Speaking / Expert Seminar</option>
-                            <option value="phd">Doctoral Research / Mentorship</option>
-                            <option value="other">Other Inquiry</option>
-                        </select>
-                    </div>
-
-                    <div class="space-y-1">
-                        <label class="text-xs font-semibold text-slate-600 dark:text-slate-400">Detailed Message</label>
-                        <textarea required id="contactMessage" rows="4" placeholder="Describe the potential scope of academic cooperation..." class="w-full text-xs px-3 py-2.5 rounded-lg border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 focus:outline-none focus:ring-2 focus:ring-brand-500"></textarea>
-                    </div>
-
-                    <!-- Submit Message Box Status (Simulation success indicator) -->
-                    <div id="formStatusBox" class="hidden rounded-lg p-3 text-xs"></div>
-
-                    <button type="submit" class="w-full rounded-xl bg-brand-600 px-4 py-2.5 text-xs font-semibold text-white shadow hover:bg-brand-700 dark:bg-cyber-600 dark:hover:bg-cyber-700 transition flex items-center justify-center gap-2">
-                        <i class="fa-solid fa-paper-plane"></i> Dispatch Collaboration Request
-                    </button>
-                </form>
             </div>
         </div>
     </section>
@@ -922,30 +874,7 @@
         renderPublications();
     }
 
-    // Interactive Collaboration Form handler
-    function handleContactSubmit(event) {
-        event.preventDefault();
-        const name = document.getElementById('contactName').value;
-        const email = document.getElementById('contactEmail').value;
-        const topic = document.getElementById('contactTopic').value;
-        const statusBox = document.getElementById('formStatusBox');
-
-        statusBox.className = "rounded-lg p-3 text-xs bg-green-50 text-green-800 dark:bg-green-950/30 dark:text-green-300";
-        statusBox.innerHTML = `
-            <p class="font-bold">✓ Academic Dispatch Successful!</p>
-            <p class="mt-0.5">Thank you, <strong>${name}</strong>. An email notification simulating your inquiry on ${topic} has been sent to Dr. Arpita (maheriyaarpita96@gmail.com).</p>
-        `;
-        statusBox.classList.remove('hidden');
-
-        // Reset form inputs
-        document.getElementById('contactForm').reset();
-    }
-
-    // Startup configuration
-    window.onload = function() {
-        initTheme();
-        renderPublications();
-    };
+    
 </script>
 </body>
 </html>
